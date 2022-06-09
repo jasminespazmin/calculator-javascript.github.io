@@ -1,0 +1,98 @@
+*, *::before, *::after {
+box-sizing: border-box;
+font-family: 'Arial', sans-serif;
+font-weight: normal;
+}
+
+body {
+    padding: 2px;
+    margin: 200px;
+    background: linear-gradient(to right,#00AAF8,#00FF6C);
+    background-clip: padding-box;
+}
+
+.calculator-grid {
+    flood-color: black;
+    box-shadow: 10px 10px 5px lightblue;
+    border: 15px;
+    border-style: outset;
+    background:rgba(58, 187, 207, 0.771);
+    display: grid;
+    justify-content: center;
+    align-items: top-center;
+    height: 70vh;
+    min-width: max-content;
+    grid-template-columns: repeat(4,100px);
+    grid-template-rows: minmax(120px, auto) repeat(5,79);
+
+}
+
+.calculator-grid > button {
+    margin-right: 20%;
+    cursor: pointer;
+    font-size: 2rem;
+    border: .8px solid white;
+    outline: solid whitesmoke;
+    border-radius: 23%;
+    background-color: rgb(149, 208, 120);
+    
+}
+
+.calculator-grid > button:hover {
+        background-color:rgba(58, 187, 207, 0.771);
+}
+
+.span-two {
+    grid-column: span 2;
+}
+
+.output {
+    grid-column: 1 / -1;
+    outline: rgba(58, 140, 194, 0.7);
+    background-color: rgba(84, 219, 234, 0.75);
+    color: rgb(255, 255, 255);
+    font-display: bold;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    flex-direction: column;
+    padding: 35px;
+    word-wrap: break-word;
+    word-break: break-all;
+    min-width: inherit;
+}
+
+.current-operand {
+    color: white;
+    font-size: 2.5rem;
+}
+ 
+.video {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -100;
+    transform: translate(-50%,-50%);
+}
+.video-container {
+    position: fixed;
+  }
+
+  .play__button {
+      margin-right: 100;
+      padding: 20;
+      border-radius: 7px;
+      font-size: large;
+      color: white;
+      outline-color: aliceblue;
+      box-shadow: rgba(58, 140, 194, 0.7);
+      background-color:rgba(84, 219, 234, 0.75);
+      max-height: 2%;
+      min-height: fit-content;
+      max-width: fit-content;
+
+  }
